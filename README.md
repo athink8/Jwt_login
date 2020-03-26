@@ -19,6 +19,6 @@
 
 ---
 
-![](https://cdn.jsdelivr.net/gh/athink8/cdn/imgs/other/ssoLogin.png)
+![1](http://github.com/athink8/Jwt_login/imgs/ssoLogin.png)
 
-![](https://cdn.jsdelivr.net/gh/athink8/cdn/imgs/other/ssoLRegist.png)
+![2](http://github.com/athink8/Jwt_login/imgs/ssoLRegist.png)
