@@ -19,6 +19,6 @@
 
 ---
 
-![1](http://github.com/athink8/Jwt_login/imgs/ssoLogin.png)
+![1](https://github.com/athink8/Jwt_login/blob/master/imgs/ssoLogin.png)
 
-![2](http://github.com/athink8/Jwt_login/imgs/ssoLRegist.png)
+![2](https://github.com/athink8/Jwt_login/blob/master/imgs/ssoLRegist.png)
