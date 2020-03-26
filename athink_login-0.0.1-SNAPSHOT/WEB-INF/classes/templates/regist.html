@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>regist</title>
+    <link rel="stylesheet" th:href="@{../webjars/bootstrap/3.4.1/css/bootstrap.css}">
+    <script type="text/javascript" th:src="@{/webjars/jquery/1.12.4/jquery.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.4.1/js/bootstrap.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/jquery-validation/1.19.1/dist/jquery.validate.js}"></script>
+    <script type="text/javascript"
+            th:src="@{/webjars/jquery-validation/1.19.1/dist/localization/messages_zh.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/regist.css}">
+    <script type="text/javascript" th:src="@{sourceLib/jsLib/JSEncrypt.js}"></script>
+    <script type="text/javascript" th:src="@{/js/regist.js}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<!--内容主题-->
+<div class="container-fluid">
+    <!--首页按钮-->
+    <div class="row" id="homebtn1">
+        <div class="col-md-12">
+            <input type="hidden" th:value="${session.keyMap.get(0)}" id="pk"
+                   th:if="'${session.keyMap.get(0)!=null}'">
+            <a href="#"> Athink </a>
+            <span>||</span>
+            <a href="#"> GO </a>
+        </div>
+    </div>
+    <br>
+    <!--注册框-->
+    <div class="row" id="registPage">
+        <!--左边图片-->
+        <div id="div-img" class="col-md-offset-2 col-md-3 hidden-sm hidden-xs">
+            <div id="div-img-all">
+                <strong id="div-img-text">越努力 越幸运</strong>
+                <img id="div-img-img" class="img-responsive" th:src="@{/source/img/registleft .jpeg}"
+                     alt="registImg">
+            </div>
+        </div>
+        <!--右边注册界面-->
+        <div id="div-regist" class="col-md-3 col-sm-12 col-xs-12">
+            <!--密码注册表单-->
+            <form id="form-regist" style="display:block" action="/" onsubmit="return false">
+                <!--包含输入框的div-->
+                <div id="form-regist-input">
+                    <div class="form-group form-group-md">
+                        <label for="username" id="userNameLabel"></label>
+                        <input type="text" class="form-control " id="username" name="username" placeholder="请输入邮箱账号">
+                    </div>
+                    <div class="form-group form-group-md" id="form-regist-name">
+                        <label for="name"></label>
+                        <input type="text" class="form-control " id="name" name="name"
+                               placeholder="请输入昵称">
+                    </div>
+                    <div class="form-group form-group-md">
+                        <label for="phone"></label>
+                        <input type="text" class="form-control " id="phone" name="phone" placeholder="请输入手机号">
+                    </div>
+                    <div class="form-group form-group-md">
+                        <label for="password"></label> <!--class="sr-only" 隐藏-->
+                        <div class="input-group" id="form-regist-psd">
+                            <input type="password" class="form-control" id="password" name="password"
+                                   placeholder="请输入不少于6位密码">
+                            <div class="input-group-addon eyes" id="regist-eye">
+                                <span class="glyphicon glyphicon-eye-open" title="0" style="display: none"></span>
+                                <!--开眼-->
+                                <span class="glyphicon glyphicon-eye-close" title="1"></span> <!--闭眼-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-md">
+                        <label for="password2"></label> <!--class="sr-only" 隐藏-->
+                        <div class="input-group" id="form-regist-psd2">
+                            <input type="password" class="form-control" id="password2" name="password2"
+                                   placeholder="请确认密码">
+                            <div class="input-group-addon eyes" id="regist-eye2">
+                                <span class="glyphicon glyphicon-eye-open" title="0" style="display: none"></span>
+                                <!--开眼-->
+                                <span class="glyphicon glyphicon-eye-close" title="1"></span> <!--闭眼-->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group form-group-md">
+                        <label for="validCode"></label>
+                        <div class="input-group" id="form-regist-validCode">
+                            <input type="text" class="form-control" id="validCode" name="validCode" placeholder="验证码">
+                            <div class="validCode input-group-addon" id="validCodeImg">
+                                <sapn>获取验证码</sapn>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--阅读协议的按钮-->
+                <div id="UserRead">
+                    <input type="checkbox" name="UserReadSure" id="UserReadSure">
+                    <span>我已阅读并同意 <a href="#" id="UserRead-page">用户协议</a></span>
+                </div>
+                <!--注册按钮-->
+                <br>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default btn-lg btn-block">注册</button>
+                </div>
+            </form>
+            <!--登录按钮 -->
+            <div id="login-btns">
+                <a id="login-btn" class="aBtn">登录</a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <!--底部-->
+    <div id="footPage" class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12" id="authorPage">
+            <span id="authorName">@athink</span>
+            <span id="nowTime"></span>
+        </div>
+    </div>
+</div>
+<!--保存访问的地址-->
+<input type="hidden" th:value="${#request.getAttribute('myUrl')}" id="myUrl">
+</body>
+</html>

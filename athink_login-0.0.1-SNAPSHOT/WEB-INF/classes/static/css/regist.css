@@ -1,0 +1,174 @@
+/*注册的css*/
+
+* {
+    text-decoration: none;
+    list-style: none; /*标记去除*/
+}
+
+body {
+    background-color: white;
+}
+
+/*主页面 设置背景*/
+.container-fluid {
+    width: 100%;
+    background-image: url("../source/img/4-min2.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: #1b6d85;
+}
+
+/*首页按钮*/
+#homebtn1 {
+    position: relative;
+    padding-top: 3%;
+    padding-left: 3%;
+}
+
+#homebtn1 * {
+    color: white;
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+#homebtn1 a:hover {
+    color: #ebcccc;
+}
+
+/*注册左边总div*/
+#div-img-all {
+    position: relative;
+    left: 5%;
+    padding-top: 11%;
+    height: 300px;
+}
+
+/*注册左边总div里的背景*/
+#div-img-img {
+    position: absolute;
+    z-index: 2;
+    border: 1px solid white;
+}
+
+/*注册左边总div里的文字P*/
+#div-img-text {
+    font-weight: bold;
+    font-size: 35px;
+    color: #c4e3f3;
+    position: absolute;
+    z-index: 3;
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+
+/*包含注册表单的div*/
+#div-regist {
+    border: 3px solid #8a6d3b;
+    height: 556px;
+    background: #ebcccc
+}
+
+/*注册框中里所有表单下的所有div*/
+#div-regist > form > div {
+    padding-top: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/*密码注册表单下的form-group*/
+.form-group {
+    margin-bottom: 3%;
+}
+
+/*密码注册表单下里的密码旁开眼图标div*/
+.eyes {
+    position: relative;
+    left: 10px;
+    background: white;
+    cursor: pointer;
+}
+
+/*密码注册表单下的验证码位置*/
+.validCode {
+    position: relative;
+    left: 2%;
+    top: 1%;
+    cursor: pointer;
+}
+
+/*注册表单下的阅读协议文字前的选择框*/
+#UserReadSure {
+    height: 18px;
+    width: 18px;
+    position: relative;
+    margin-left: 5px;
+    top: 4px;
+}
+
+/*注册表单下的阅读协议文字*/
+#UserRead > span {
+    color: #0F0F0F;
+    font-weight: bolder
+}
+
+#UserRead > span > a:hover {
+    color: #F0768E;
+}
+
+/*登录按钮*/
+#login-btns > a {
+    cursor: pointer;
+    line-height: 0px;
+    color: #8597E0;
+    font-size: 16px;
+    margin-left: 80%;
+}
+
+/*登录按钮移动*/
+#login-btns > a:hover {
+    color: red;
+}
+
+/*登录的按钮移动*/
+#login-btn:hover {
+    color: #223788;
+}
+
+/*底部div*/
+#footPage {
+    /*height: 62px;*/
+}
+
+/*底部div里 的作者信息div*/
+#authorPage {
+    text-align: center;
+}
+
+/*底部div 里的文字*/
+#authorPage > span {
+    color: white;
+    font-size: 15px;
+    margin-left: 50%;
+}
+
+/*表单错误信息*/
+.error {
+    color: #FF2222;
+    font-size: 13px;
+}
+
+/* a标签当按钮时处理*/
+.aBtn {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+

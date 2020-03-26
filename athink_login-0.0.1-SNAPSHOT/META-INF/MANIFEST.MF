@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: athink_login
+Implementation-Version: 0.0.1-SNAPSHOT
+Start-Class: athink_login.com.AthinkLoginApplication
+Spring-Boot-Classes: WEB-INF/classes/
+Spring-Boot-Lib: WEB-INF/lib/
+Build-Jdk-Spec: 1.8
+Spring-Boot-Version: 2.1.9.RELEASE
+Created-By: Maven Archiver 3.4.0
+Main-Class: org.springframework.boot.loader.WarLauncher
+

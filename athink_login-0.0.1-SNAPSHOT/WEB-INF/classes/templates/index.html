@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+index page!!<br>
+<div th:if="${session.session_user !=null}">
+    <p  th:text="'欢迎你: '+${session.session_user.name}">11</p>
+    <a href="/loginOut?loginOut=yes">退出登录</a>
+</div>
+
+<a th:if="${session.session_user==null}" th:href="@{/regist}">注册</a>
+<a th:if="${session.session_user==null}" th:href="@{/login}">登录</a>
+</body>
+</html>

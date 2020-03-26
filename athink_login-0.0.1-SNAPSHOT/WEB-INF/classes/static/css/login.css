@@ -1,0 +1,237 @@
+/*登录的css*/
+
+* {
+    text-decoration: none;
+    list-style: none; /*标记去除*/
+}
+
+body {
+    background-color: white;
+}
+
+/*主页面 设置背景*/
+.container-fluid {
+    width: 100%;
+    background-image: url("../source/img/4-min2.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: #1b6d85;
+}
+
+/*首页按钮*/
+#homebtn1 {
+    position: relative;
+    padding-top: 3%;
+    padding-left: 3%;
+}
+
+#homebtn1 * {
+    color: white;
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+#homebtn1 a:hover {
+    color: #c4e3f3;
+}
+
+/*登录左边总div*/
+#div-img-all {
+    position: relative;
+    left: 5%;
+    padding-top: 11%;
+    height: 300px;
+}
+
+/*登录左边总div里的背景*/
+#div-img-img {
+    position: absolute;
+    z-index: 2;
+    border: 1px solid black;
+}
+
+/*登录左边总div里的文字P*/
+#div-img-text {
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    z-index: 3;
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+/*切换登录方式的所有按钮总div*/
+#form-butts {
+    margin-top: 5%;
+    height: 30px;
+}
+
+/*切换登录方式的所有按钮*/
+#form-butts > a {
+    font-size: 25px;
+    font-weight: bolder;
+    padding-top: 2%;
+    padding-left: 12%;
+    cursor: pointer;
+}
+
+/*切换登录方式的 密码登录按钮*/
+#form-butts-psdLogin {
+    color: white;
+}
+
+/*切换登录方式的 手机号登录按钮*/
+#form-butts-phoneLogin {
+    color: #85B0F2;
+}
+
+/*包含登录表单的div*/
+#div-login {
+    border: 3px solid #4cae4c;
+    height: 550px;
+    /*background: #ebcccc*/
+    background: #06A5A5;
+}
+
+/*登录框中里所有表单下的所有div*/
+#div-login > form > div {
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/*密码登录表单下的input-div*/
+#form-login-input > div {
+    /*width: 82%;*/
+}
+
+/*密码登录表单下里的密码旁开眼图标div*/
+#login-eye {
+    position: relative;
+    left: 10px;
+    background: white;
+    cursor: pointer;
+}
+
+/*登录表单下的验证码图片位置*/
+.validCode {
+    position: relative;
+    left: 2%;
+    top: 1%;
+    cursor: pointer;
+}
+
+/*密码登录表单下的验证码上总div*/
+#validCodeDiv {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    cursor: default;
+}
+
+/*密码登录表单下的验证码*/
+#validCodeDiv > div {
+    cursor: pointer;
+}
+
+
+/*密码登录表单下的自动登录文字信息*/
+#form-login-auto > span {
+    color: #2b542c;
+}
+
+/*密码登录表单下的 下面的两个按钮a*/
+#form-login-btns > a:hover {
+    color: red;
+}
+
+/*密码登录表单下的 下面的两个按钮a*/
+#form-login-btns > a {
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+}
+
+/*登录中忘记密码按钮*/
+#form-login-fbtn {
+    margin-left: 10%;
+}
+
+/*注册按钮*/
+#form-login-rbtn {
+    margin-left: 52%;
+}
+
+/*第三方登录信息和按钮*/
+#form-login-other {
+    text-align: center;
+}
+
+/*底部div*/
+#footPage {
+    /*height: 62px;*/
+}
+
+/*底部div里 的作者信息div*/
+#authorPage {
+    text-align: center;
+}
+
+/*底部div 里的文字*/
+#authorPage > span {
+    color: white;
+    font-size: 16px;
+    margin-left: 48%;
+}
+
+/*表单错误信息*/
+.error {
+    color: #FF2222;
+    font-size: 13px;
+}
+
+/*模拟弹框div*/
+#myFrameDiv {
+    display: none;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    font-size: 20px;
+    background: #85B0F2;
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 26%;
+    left: 41%;
+    border: 1px solid #ce8483;
+    z-index: 10;
+}
+
+/*关闭窗口*/
+#closeMyFrameDiv {
+    position: absolute;
+    left: 94%;
+    color: black;
+}
+
+/*模拟弹框出现后背景虚化*/
+#back {
+    display: none;
+    background: #B3B3B3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    opacity: 0.8;
+}
+
+/* a标签当按钮时处理*/
+.aBtn{
+    cursor: pointer;
+}
+
+
+
+
+

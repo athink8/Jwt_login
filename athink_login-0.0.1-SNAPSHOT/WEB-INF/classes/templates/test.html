@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<script type="text/javascript" th:src="@{/webjars/jquery/1.12.4/jquery.js}"></script>
+<script type="text/javascript" th:src="@{/sourceLib/jsLib/jsencrypt.js}"></script>
+<script th:inline="javascript">
+    $(function () {
+        $("#but1").click(function () {
+            var publicKey = [[${session.KeyMap.get(0)}]];
+            // console.log(publicKey);
+            var encrypt = new JSEncrypt();
+            //设置公钥
+            encrypt.setPublicKey(publicKey);
+            //加密
+            var encrypted = encrypt.encrypt($("#test1").val());
+            //必须加上
+            var encrypted2 = encodeURI(encrypted).replace(/\+/g, '%2B');
+            //请求
+            var datas = "encryptedTest=" + encrypted2;
+            console.log(datas);
+
+            $.ajax({
+                url: "/test",
+                type: "POST",
+                data: datas,
+                async: false,
+                success: function (data) {
+                    if (data != null) {
+                        alert(data)
+                    }
+                }
+            })
+        })
+
+
+    })
+</script>
+<body>
+thi is test page!::
+<input type="text" name="test1" id="test1">
+<input type="button" value="tijiao" id="but1">
+</body>
+</html>
